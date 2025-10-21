@@ -1,4 +1,4 @@
-# Cheat-sheet pwntools — Du débutant à l'expert (en français)
+# Cheat-sheet pwntools
 
 > Objectif : une fiche complète, pratique et raisonnée pour aller de la connexion / téléchargement d’un binaire jusqu’à l’exploit final, en couvrant toutes les étapes, décisions et variantes courantes. Contient : principes, commandes, exemples `pwntools` (Python3), stratégies selon résultats, et quelques tricks avancés (gdb/pwngdb/gef, exécution de commandes pendant l’exécution, etc.).
 
