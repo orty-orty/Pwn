@@ -6,7 +6,7 @@
 
 ---
 
-# 1. Workflow mental (pipeline d'exploitation)
+# 1. Raisonnements
 
 1. **Récupération / connexion**
    - Télécharger le binaire / récupérer accès (HTTP, git, scp, SSH).
