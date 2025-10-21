@@ -37,14 +37,6 @@
 
 # 2. Connexions / téléchargement
 
-## Télécharger un binaire
-Classique :
-```bash
-wget http://host/challenge -O vuln
-curl -sSL http://host/challenge -o vuln
-scp user@host:/path/to/vuln .
-```
-
 ## Connexions avec pwntools
 ```python
 from pwn import *
