@@ -223,7 +223,7 @@ p.interactive()
 
 # 7. Debugging : gdb / pwngdb / gef / gdb.attach
 
-## Lancer sous gdb avec pwntools
+## Lancer gdb avec pwntools
 ```python
 p = gdb.debug(['./vuln'], gdbscript='break main\ncontinue')
 ```
@@ -415,7 +415,7 @@ p.interactive()
 
 ---
 
-# 13. Ressources avancées (à garder en tête)
+# 13. Ressources avancées
 
 - `pwntools` docs (API reference).
 - `Ghidra` / `radare2` / `objdump` pour reverse.
@@ -432,12 +432,7 @@ p.interactive()
 
 ---
 
-# À propos
 
-Fichier généré par ChatGPT — si tu veux je peux aussi :
-- Générer un dépôt GitHub complet (README, LICENSE, .gitignore, `exploit_template.py`).
-- Produire une version `README.md` adaptée pour GitHub (avec badges, instructions d'installation et exemple d'utilisation).
-- Te fournir la série de commandes git pour initialiser et pousser le dépôt.
 
 
 
