@@ -83,12 +83,14 @@ Helpers souvent utilisés :
 
 # 4. Analyse rapide des protections (cheat)
 
-- **NX** (non-executable stack) : si actif → pas de shellcode sur stack → ROP/ret2libc.
-- **PIE** : si actif → adresses du binaire relocalisées → besoin d'un leak pour connaître base.
-- **Canary (stack protector)** : si présent → écriture qui double-écrase canary fait crash ; leak nécessaire ou autre vecteur.
-- **RELRO (partial/full)** : `full` empêche GOT overwrite via `.got.plt` immuable.
-- **ASLR** : empêche adresses fixes → need leak pour libc/base.
-- **Fortify / NX/SMEP/SMAP** : influences avancées (SMEP/SMAP sur kernels, rare en CTF).
+| Protection | Effet si active | Impact sur l'exploitation |
+|-----------|----------------|---------------------------|
+| **NX** (Non-Executable stack) | La stack n’est pas exécutable | Impossible d’exécuter du shellcode sur la stack → ROP / ret2libc |
+| **PIE** | Le binaire est relocalisé à chaque exécution | Les adresses changent → leak nécessaire pour retrouver la base |
+| **Canary** (Stack Protector) | Vérification d’intégrité avant le `ret` | Écrasement du canary → crash → leak ou autre vecteur requis |
+| **RELRO (partial / full)** | `full` rend la GOT en lecture seule | Empêche le GOT overwrite via `.got.plt` |
+| **ASLR** | Randomisation des adresses mémoire | Plus d’adresses fixes → leak requis (libc / stack / heap) |
+| **Fortify / SMEP / SMAP** | Protections avancées (surtout kernel) | Limitent certaines primitives, rares en CTF userspace |
 
 ---
 
