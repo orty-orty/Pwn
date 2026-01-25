@@ -1,4 +1,4 @@
-# Let's Learn PWN 🐧💣
+# 🐧💣 Let's Learn PWN 
 In this repository, you will find a collection of notes and exercises focused on **binary exploitation (pwn)**.  
 The goal is to provide a clear and progressive learning path to understand how memory corruption vulnerabilities work and how they can be exploited in practice.  
 
