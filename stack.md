@@ -27,7 +27,7 @@
 > Trouver la fonction `system()` de la `libc` pour exécuter `/bin/sh` et obtenir un shell.
 ## Méthodologie
 1. `file binaire`: si `dynamically linked` alors la *libc* est externe et il faut la dl (`ldd ./binaire` pour trouver le nom ou utilisation de [[GDB]] )
-2. Trouver l'**offset** pour pouvoir contrôler **eip** avec [[Pwntools]]
+2. Trouver l'**offset** pour pouvoir contrôler **eip** avec [Pwntools](./Pwntools.md)
 3. 
 
 | **ASLR désactivé**                                         | **ASLR activé**                                                                               |
