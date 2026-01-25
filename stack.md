@@ -23,7 +23,8 @@
 # Ret2libc
 
 > [!TIP]
-> Objectif
+> **Objectif**
+> 
 > Trouver la fonction `system()` de la `libc` pour exécuter `/bin/sh` et obtenir un shell.
 ## Méthodologie
 1. `file binaire`: si `dynamically linked` alors la *libc* est externe et il faut la dl (`ldd ./binaire` pour trouver le nom ou utilisation de [[GDB]] )
