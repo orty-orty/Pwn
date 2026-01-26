@@ -27,7 +27,7 @@
 >
 >Trouver une fonction "**win**" dans le binaire qui permet, une fois déclenchée, d'obtenir un shell ou d'exécuter des commandes arbitraires
 ## Méthodologie
-1. Trouver l'offset qui permet d'écraser **eip** (utiliser [[Pwntools]])
+1. Trouver l'offset qui permet d'écraser **eip** (utiliser [pwntools](./pwntools.md))
 2. Trouver l'adresse de la fonction dans le binaire
 3. Envoyer le payload. Il faut penser à ajouter un endroit où s'ouvrira le shell
 
@@ -49,7 +49,7 @@
 4. Envoyer le payload
 
 >[!IMPORTANT]
->Notez que toutes ces étapes doivent se faire dans le même script avec [[Pwntools]] à cause de la relocalisation du binaire.
+>Notez que toutes ces étapes doivent se faire dans le même script avec [pwntools](./pwntools.md) à cause de la relocalisation du binaire.
 
 ---
 # Ret2libc
