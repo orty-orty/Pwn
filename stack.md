@@ -65,7 +65,7 @@
 
 | **ASLR désactivé**                                         | **ASLR activé**                                                                               |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Trouver `system`                                           | Leak de la *libc*                                                                             |
+| Trouver `system()`                                           | Leak de la *libc*                                                                             |
 | Trouver `/bin/sh`                                          | Calculer la base de la *libc* : `@leak - offset symbole leak dans la libc`                    |
 | Payload = `offset + @system + padding fake ebp + @/bin/sh` | Résoudre les adresse de `system` et `/bin/sh` :<br>`@base_libc + offset de system ou /bin/sh` |
 |                                                            | Payload = `offset + @system + padding fake ebp + @/bin/sh`                                    |
