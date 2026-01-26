@@ -6,7 +6,7 @@
 > 	`./binary $(python -c 'print(payload'))`
 > 
 > stdin:
-> 	`python -c 'print(payload) | ./binary'` 
+> 	`python -c 'print(payload)' | ./binary` 
 
 ---
 # Protections
