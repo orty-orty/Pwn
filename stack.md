@@ -20,6 +20,38 @@
 | **Fortify / SMEP / SMAP** | Protections avancées (surtout kernel) | Limitent certaines primitives, rares en CTF userspace |
 
 ---
+# Ret2win
+
+>[!TIP]
+>**Objectif**
+>
+>Trouver une fonction "**win**" dans le binaire qui permet, une fois déclenchée, d'obtenir un shell ou d'exécuter des commandes arbitraires
+## Méthodologie
+1. Trouver l'offset qui permet d'écraser **eip** (utiliser [[Pwntools]])
+2. Trouver l'adresse de la fonction dans le binaire
+3. Envoyer le payload. Il faut penser à ajouter un endroit où s'ouvrira le shell
+
+```bash
+    (python -c 'print "A" * offset + "\x16\x85\x04\x08"';cat -) | ./binary
+```
+
+---
+# Protection PIE
+
+>[!TIP]
+>**Objectif**
+>
+>Exploiter le fait que les adresses conservent toujours le même offset entre elles (malgré la relocalisation du binaire) pour accéder à la fonction voulue
+## Méthodologie
+1. Trouver l'adresse de `main()`
+2. Trouver l'adresse de l'autre fonction voulue
+3. Calculer l'offset entre les deux fonctions
+4. Envoyer le payload
+
+>[!IMPORTANT]
+>Notez que toutes ces étapes doivent se faire dans le même script avec [[Pwntools]] à cause de la relocalisation du binaire.
+
+---
 # Ret2libc
 
 > [!TIP]
