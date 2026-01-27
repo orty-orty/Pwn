@@ -58,7 +58,12 @@
 > **Objectif**
 > 
 > Trouver la fonction `system()` de la `libc` pour exécuter `/bin/sh` et obtenir un shell.
-## Méthodologie
+## Méthodologie x86 (32 bits)
+
+>[!NOTE]
+>**Particularité x86**
+>
+>Les arguments sont passés directement sur la stack
 1. `file binaire`: si `dynamically linked` alors la *libc* est externe et il faut la dl (`ldd ./binaire` pour trouver le nom ou utilisation de GDB)
 2. Trouver l'**offset** pour pouvoir contrôler **eip** avec [pwntools](./pwntools.md)
 3. 
