@@ -9,17 +9,6 @@
 > 	`python -c 'print(payload)' | ./binary` 
 
 ---
-# Protections
-| Protection | Effet si active | Impact sur l'exploitation |
-|-----------|----------------|---------------------------|
-| **NX** (Non-Executable stack) | La stack n’est pas exécutable | Impossible d’exécuter du shellcode sur la stack: ROP / ret2libc |
-| **PIE** | Le binaire est relocalisé à chaque exécution | Les adresses changent: leak nécessaire pour retrouver la base |
-| **Canary** (Stack Protector) | Vérification d’intégrité avant le `ret` | Écrasement du canary = crash: leak ou autre vecteur requis |
-| **RELRO (partial / full)** | `full` rend la GOT en lecture seule | Empêche le GOT overwrite via `.got.plt` |
-| **ASLR** | Randomisation des adresses mémoire | Plus d’adresses fixes: leak requis (libc / stack / heap) |
-| **Fortify / SMEP / SMAP** | Protections avancées (surtout kernel) | Limitent certaines primitives, rares en CTF userspace |
-
----
 # Ret2win
 
 >[!TIP]
